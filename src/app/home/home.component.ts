@@ -6,8 +6,6 @@ import { FooterComponent } from "../shared/footer/footer.component";
   selector: 'app-home',
   imports: [HeaderComponent, FooterComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
 })
-export class HomeComponent {
-
-}
+export class HomeComponent {}
