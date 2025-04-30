@@ -1,0 +1,46 @@
+@import "../../../assets/variables/variables.scss";
+form{
+    input{
+        width: 65%;
+        border-radius: 50px;
+        border: none;
+        background-color: $inputBlack;
+        color: rgb(255, 255, 255);
+        padding: 20px 80px 20px 30px;
+    }
+}
+.newsletter-heading{
+    color: #fff;
+    font-weight: 500;
+}
+footer{
+    .subscribe-box{
+        background: rgb(39, 42, 45);
+    }
+}
+.footer-top{
+    background-color: #212529;
+    border-top: 1px solid #3c3c3c;
+    ul{
+        padding: 0;
+        li{
+            a{color: #a0a0a0;
+                text-decoration: none;
+                transition: 0.3s;
+            &:hover{
+                color:#ef4836;
+                
+            }}
+        }
+    }
+    .container{  border-bottom: 1px solid #3c3c3c;
+        padding-bottom: 25px;
+
+    }
+}
+
+
+.footer-bottom{
+    background-color: #212529;
+}
+
