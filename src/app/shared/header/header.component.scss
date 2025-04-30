@@ -69,6 +69,10 @@ header {
     top: calc(100% + 5px);
     right: 0;
     min-width: 180px;
+    @media screen and (max-width:767px) {
+      min-width: 150px;
+      
+    }
     background-color: $dropdownBlack;
 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
