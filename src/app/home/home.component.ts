@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { FooterComponent } from '../shared/footer/footer.component';
-import { HeaderComponent } from '../shared/header/header.component';
+import { HeaderComponent } from "../shared/header/header.component";
+import { FooterComponent } from "../shared/footer/footer.component";
 
 @Component({
   selector: 'app-home',
-  imports: [FooterComponent, HeaderComponent],
+  imports: [HeaderComponent, FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
