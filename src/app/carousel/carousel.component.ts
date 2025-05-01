@@ -5,12 +5,12 @@ import { CarouselModule } from 'primeng/carousel';
 import { TagModule } from 'primeng/tag';
 
 @Component({
-  selector: 'app-banner-carousel',
+  selector: 'app-carousel',
   imports: [CarouselModule, TagModule, CommonModule, ButtonModule],
-  templateUrl: './banner-carousel.component.html',
-  styleUrl: './banner-carousel.component.scss',
+  templateUrl: './carousel.component.html',
+  styleUrl: './carousel.component.scss',
 })
-export class BannerCarouselComponent {
+export class CarouselComponent {
   products: any[] = [];
 
   responsiveOptions: any[] | undefined;
