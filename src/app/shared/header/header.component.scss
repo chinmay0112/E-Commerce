@@ -1,9 +1,11 @@
 @import "../../../assets/variables/variables.scss";
 
 // Header styles
-header {
+.header {
   padding: 10px 0;
-  border-bottom: 1px solid $border1;
+  &-top {
+    border-bottom: 1px solid $border1;
+  }
 }
 
 // List reset
@@ -141,6 +143,27 @@ header {
     &:before {
       right: auto;
       left: 25px;
+    }
+  }
+}
+:host ::ng-deep {
+  p-menubarsub {
+    width: 100%;
+  }
+  .p {
+    &-menubar {
+      border: none;
+      padding: 20px 15px;
+
+      &-root-list {
+        justify-content: end;
+        li {
+          margin: 0px 12px;
+          @media screen and (max-width: 768px) {
+            margin: 0;
+          }
+        }
+      }
     }
   }
 }

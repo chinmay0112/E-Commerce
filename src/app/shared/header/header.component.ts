@@ -1,17 +1,60 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { SelectModule } from 'primeng/select';
+import { MenubarModule } from 'primeng/menubar';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-header',
-  imports: [SelectModule, CommonModule],
+  imports: [SelectModule, CommonModule, MenubarModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
   isAccountDropdownVisible = false;
   isCurrencyDropdownVisible = false;
+  items: MenuItem[] | undefined;
 
+  ngOnInit() {
+    this.items = [
+      {
+        label: 'Home',
+      },
+      {
+        label: 'Features',
+      },
+      {
+        label: 'Projects',
+
+        items: [
+          {
+            label: 'Components',
+          },
+          {
+            label: 'Blocks',
+          },
+          {
+            label: 'UI Kit',
+          },
+          {
+            label: 'Templates',
+
+            items: [
+              {
+                label: 'Apollo',
+              },
+              {
+                label: 'Ultima',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        label: 'Contact',
+      },
+    ];
+  }
   // Menu items for the account dropdown
   accountMenuItems = [
     { label: 'Login', link: '/' },
