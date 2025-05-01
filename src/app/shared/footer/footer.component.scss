@@ -24,6 +24,7 @@ footer {
 .footer-top {
   background-color: #212529;
   border-top: 1px solid #3c3c3c;
+  padding: 50px 0px;
   ul {
     padding: 0;
     li {
@@ -39,23 +40,32 @@ footer {
   }
   .container {
     border-bottom: 1px solid #3c3c3c;
-    padding-bottom: 25px;
+    padding-bottom: 50px;
   }
 }
-
 .footer-bottom {
   background-color: #212529;
 }
 
-.icon-box{
-    border-right:1px solid #3c3c3c;
-}
+
 .content{
-    border-right:1px solid #3c3c3c;
+    border-left:1px solid #3c3c3c;
+    &-box{    color: $offwhite;
+      align-items: center;}
 }
 .email{
     border-right:1px solid #3c3c3c;
+    border-left:1px solid #3c3c3c;
+    span{
+      color:$yellow;
+    }
+    a{
+      text-decoration: none;
+      transition: 0.3s all;
+      color:$offwhite;
+      &:hover{
+        color:$red;
+      }
+    }
 }
-.content-box{
-    color: $offwhite;
-}
+
