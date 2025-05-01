@@ -28,7 +28,7 @@ footer {
     padding: 0;
     li {
       a {
-        color: #a0a0a0;
+        color: $offwhite;
         text-decoration: none;
         transition: 0.3s;
         &:hover {
@@ -45,4 +45,17 @@ footer {
 
 .footer-bottom {
   background-color: #212529;
+}
+
+.icon-box{
+    border-right:1px solid #3c3c3c;
+}
+.content{
+    border-right:1px solid #3c3c3c;
+}
+.email{
+    border-right:1px solid #3c3c3c;
+}
+.content-box{
+    color: $offwhite;
 }
