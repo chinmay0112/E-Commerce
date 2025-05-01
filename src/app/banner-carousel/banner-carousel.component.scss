@@ -1,0 +1,26 @@
+@import "../../assets/variables/variables.scss";
+
+:host ::ng-deep {
+  .p {
+    &-carousel {
+      &-indicator {
+        &-active {
+          button {
+            background: $red;
+          }
+        }
+        &-button {
+          border-radius: 0;
+          height: 10px;
+          width: 10px;
+        }
+      }
+      &-content {
+        display: block;
+      }
+      .p-button {
+        display: none;
+      }
+    }
+  }
+}
