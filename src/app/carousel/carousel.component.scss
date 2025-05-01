@@ -4,6 +4,11 @@
   .p {
     &-carousel {
       &-indicator {
+        &-list {
+          position: absolute;
+          top: 92%;
+          left: 50%;
+        }
         &-active {
           button {
             background: $red;
@@ -16,6 +21,9 @@
         }
       }
       &-content {
+        &-container {
+          position: relative;
+        }
         display: block;
       }
       .p-button {
