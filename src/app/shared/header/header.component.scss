@@ -2,9 +2,9 @@
 
 // Header styles
 .header {
-  padding: 10px 0;
   &-top {
     border-bottom: 1px solid $border1;
+    padding: 10px 0;
   }
 }
 
@@ -154,7 +154,10 @@
     &-menubar {
       border: none;
       padding: 20px 15px;
-
+      &-button {
+        padding: 12px;
+        border-radius: 50%;
+      }
       &-root-list {
         justify-content: end;
         li {
