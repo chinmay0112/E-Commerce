@@ -3,11 +3,14 @@ import { HeaderComponent } from '../shared/header/header.component';
 import { FooterComponent } from '../shared/footer/footer.component';
 import { CarouselComponent } from '../carousel/carousel.component';
 import { ProductCategoryComponent } from "../product-category/product-category.component";
+import { CardComponent } from "../shared/card/card.component";
 
 @Component({
   selector: 'app-home',
-  imports: [HeaderComponent, FooterComponent, CarouselComponent, ProductCategoryComponent],
+  imports: [HeaderComponent, FooterComponent, CarouselComponent, ProductCategoryComponent, CardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {}
+export class HomeComponent {
+
+}

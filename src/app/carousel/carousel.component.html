@@ -7,14 +7,12 @@
 >
   <ng-template let-product #item>
     <div class="border border-surface rounded-border">
-      <div class="mb-4">
-        <div class="relative mx-auto">
-          <img
-            src="assets/images/{{ product.image }}"
-            [alt]="product.name"
-            class="w-full rounded-border"
-          />
-        </div>
+      <div class="relative mx-auto">
+        <img
+          src="assets/images/{{ product.image }}"
+          [alt]="product.name"
+          class="w-full rounded-border"
+        />
       </div>
     </div>
   </ng-template>

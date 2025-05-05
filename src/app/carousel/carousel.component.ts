@@ -54,6 +54,12 @@ export class CarouselComponent {
 
         image: 'img-2.jpg',
       },
+      {
+        id: '2',
+        name: 'Image 3',
+
+        image: 'bg-img-1.jpg',
+      },
     ];
   }
   // getSeverity(status: string) {
