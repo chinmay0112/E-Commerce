@@ -11,23 +11,37 @@
     </div>
     <div class="flex flex-wrap justify-content-center my-6">
       <div class="box m-3 px-7 py-2 text-center">
-        <h2 class="m-0">00</h2>
+        <h2 class="m-0">
+          {{ timeLeft.months < 10 ? "0" + timeLeft.months : timeLeft.months }}
+        </h2>
         <p class="m-0">MONTH</p>
       </div>
       <div class="box m-3 px-7 py-2 text-start md:text-center">
-        <h2 class="m-0">00</h2>
+        <h2 class="m-0">
+          {{ timeLeft.days < 10 ? "0" + timeLeft.days : timeLeft.days }}
+        </h2>
         <p class="m-0">DAYS</p>
       </div>
       <div class="box m-3 px-7 py-2 text-start md:text-center">
-        <h2 class="m-0">00</h2>
+        <h2 class="m-0">
+          {{ timeLeft.hours < 10 ? "0" + timeLeft.hours : timeLeft.hours }}
+        </h2>
         <p class="m-0">HOURS</p>
       </div>
       <div class="box m-3 px-7 py-2 text-start md:text-center">
-        <h2 class="m-0">00</h2>
+        <h2 class="m-0">
+          {{
+            timeLeft.minutes < 10 ? "0" + timeLeft.minutes : timeLeft.minutes
+          }}
+        </h2>
         <p class="m-0">MINUTES</p>
       </div>
       <div class="box m-3 px-7 py-2 text-start md:text-center">
-        <h2 class="m-0">00</h2>
+        <h2 class="m-0">
+          {{
+            timeLeft.seconds < 10 ? "0" + timeLeft.seconds : timeLeft.seconds
+          }}
+        </h2>
         <p class="m-0">SECS</p>
       </div>
     </div>
@@ -47,6 +61,18 @@
     </div>
   </div>
 </section>
+<section class="nature-oil py-8">
+  <div class="container">
+    <div class="grid m-0 justify-content-center md:justify-content-end">
+      <div class="col-8">
+        <div class="text-center">
+          <p class="my-0 text-uppercase">Nature Oil Collection</p>
+          <h2 class="my-0">upto <span>50%</span> Off</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="latest-product py-8">
   <div class="text-center">
     <h2 class="my-0">Our Latest Product</h2>
@@ -59,6 +85,11 @@
       <div class="col-12 md:col-6 lg:col-3"><app-card></app-card></div>
       <div class="col-12 md:col-6 lg:col-3"><app-card></app-card></div>
     </div>
+  </div>
+</section>
+<section class="what-our-client-says py-8">
+  <div class="container">
+    <app-client-carousel></app-client-carousel>
   </div>
 </section>
 <app-footer></app-footer>

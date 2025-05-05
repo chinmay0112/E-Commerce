@@ -47,25 +47,25 @@ footer {
   background-color: #212529;
 }
 
-
-.content{
-    border-left:1px solid #3c3c3c;
-    &-box{    color: $offwhite;
-      align-items: center;}
+.content {
+  border-left: 1px solid #3c3c3c;
+  &-box {
+    color: $offwhite;
+    align-items: center;
+  }
 }
-.email{
-    border-right:1px solid #3c3c3c;
-    border-left:1px solid #3c3c3c;
-    span{
-      color:$yellow;
+.email {
+  // border-right:1px solid #3c3c3c;
+  border-left: 1px solid #3c3c3c;
+  span {
+    color: $yellow;
+  }
+  a {
+    text-decoration: none;
+    transition: 0.3s all;
+    color: $offwhite;
+    &:hover {
+      color: $red;
     }
-    a{
-      text-decoration: none;
-      transition: 0.3s all;
-      color:$offwhite;
-      &:hover{
-        color:$red;
-      }
-    }
+  }
 }
-
