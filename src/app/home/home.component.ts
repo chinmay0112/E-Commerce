@@ -5,6 +5,7 @@ import { CarouselComponent } from '../carousel/carousel.component';
 import { CardComponent } from '../shared/card/card.component';
 import { ClientCarouselComponent } from '../client-carousel/client-carousel.component';
 import { interval, Subscription } from 'rxjs';
+import { ProductCategoryComponent } from '../product-category/product-category.component';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +15,7 @@ import { interval, Subscription } from 'rxjs';
     CarouselComponent,
     CardComponent,
     ClientCarouselComponent,
+    ProductCategoryComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
