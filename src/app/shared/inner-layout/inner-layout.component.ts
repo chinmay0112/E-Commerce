@@ -23,5 +23,13 @@ export class InnerLayoutComponent implements OnInit {
   items: MenuItem[] = [];
   home: MenuItem = { icon: 'pi pi-home', routerLink: '/' };
 
-  ngOnInit() {}
+  ngOnInit() {
+    // Convert BreadcrumbItem[] to MenuItem[]
+    this.items = this.breadcrumbItems.map((item) => {
+      return {
+        label: item.label,
+        routerLink: item.link,
+      };
+    });
+  }
 }

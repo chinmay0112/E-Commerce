@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from '../shared/header/header.component';
-import { InnerLayoutComponent } from '../shared/inner-layout/inner-layout.component';
+import {
+  BreadcrumbItem,
+  InnerLayoutComponent,
+} from '../shared/inner-layout/inner-layout.component';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
@@ -26,8 +29,9 @@ export class LoginComponent implements OnInit {
   userName: string | undefined;
   password: string | undefined;
   items: MenuItem[] = [];
+  breadcrumbs: BreadcrumbItem[] = [];
 
   ngOnInit(): void {
-    this.items = [{ label: 'Login' }];
+    this.breadcrumbs = [{ label: 'Login' }];
   }
 }
