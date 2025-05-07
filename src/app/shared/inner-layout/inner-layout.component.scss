@@ -1,0 +1,43 @@
+@import "../../../assets/variables/variables.scss";
+img {
+  min-height: 120px;
+  object-fit: cover;
+}
+.cnt {
+  top: 40%;
+  left: 10%;
+  color: $white;
+  h2 {
+    font-size: 2em;
+  }
+  p {
+    font-size: 1em;
+  }
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+}
+:host ::ng-deep {
+  .p {
+    &-breadcrumb {
+      background: transparent;
+      &-item {
+        &-icon {
+          color: $white;
+        }
+        nav {
+          padding: 10px 0px;
+        }
+        &-link {
+          color: $white;
+          cursor: pointer;
+
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

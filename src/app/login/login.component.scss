@@ -1,0 +1,36 @@
+@import "../../assets/variables/variables.scss";
+h2 {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+:host ::ng-deep {
+  .p {
+    &-inputtext {
+      &:enabled {
+        &:hover {
+          border-color: none;
+          color: $inputBlack;
+        }
+        &:focus {
+          border-color: $gray2;
+        }
+      }
+    }
+
+    &-button {
+      width: 100%;
+      background: $red;
+      border: none;
+      border-radius: 0;
+      &:not(:disabled):hover {
+        background: $redHover;
+        border: none;
+      }
+    }
+    &-floatlabel {
+      &:has(input:focus) label {
+        color: $gray2;
+      }
+    }
+  }
+}

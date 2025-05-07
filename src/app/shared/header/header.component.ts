@@ -9,10 +9,18 @@ import {
 import { SelectModule } from 'primeng/select';
 import { MenubarModule } from 'primeng/menubar';
 import { MenuItem } from 'primeng/api';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [SelectModule, CommonModule, MenubarModule],
+  imports: [
+    SelectModule,
+    CommonModule,
+    MenubarModule,
+    AnimateOnScrollModule,
+    RouterLink,
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
