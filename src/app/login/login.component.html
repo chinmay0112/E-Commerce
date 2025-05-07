@@ -1,5 +1,8 @@
 <app-header></app-header>
-<app-inner-layout heading="Account"></app-inner-layout>
+<app-inner-layout
+  heading="Account"
+  [breadcrumbItems]="breadcrumbs"
+></app-inner-layout>
 <div class="container py-8">
   <h2 class="text-center">Login</h2>
   <form>
