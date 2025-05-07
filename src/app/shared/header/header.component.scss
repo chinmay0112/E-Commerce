@@ -137,12 +137,12 @@
   }
 
   .dropdown-menu {
-    right: auto;
-    left: 0;
+    // right: auto;
+    // left: 0;
 
     &:before {
       right: auto;
-      left: 25px;
+      left: 75%;
     }
   }
 }
@@ -152,6 +152,9 @@
   }
   .p {
     &-menubar {
+      &-end {
+        margin-left: 30px;
+      }
       border: none;
       padding: 20px 15px;
       &-button {
@@ -161,7 +164,7 @@
       &-root-list {
         justify-content: end;
         li {
-          margin: 0px 12px;
+          margin: 0px 8px;
           @media screen and (max-width: 768px) {
             margin: 0;
           }

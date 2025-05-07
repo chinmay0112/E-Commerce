@@ -1,10 +1,9 @@
-<!-- header.component.html -->
 <header class="header">
   <div class="header-top">
     <div class="container">
       <div class="grid m-0">
         <div class="col-12 md:col-6">
-          <ul class="list-none m-0">
+          <ul class="list-none text-center md:text-left">
             <li><i class="fa fa-phone"></i>+01 123 456 789</li>
             <li class="mx-3">
               <i class="fa fa-envelope mx-1 vertical-align-middle"></i
@@ -14,16 +13,20 @@
         </div>
         <div class="col-12 md:col-6">
           <div
-            class="flex justify-content-start md:justify-content-end flex-wrap"
+            class="flex justify-content-center md:justify-content-end flex-wrap"
           >
             <ul class="list-none flex align-items-center login-panel">
               <!-- Account Dropdown -->
               <li
                 class="dropdown-container"
+                #accountDropdown
                 (mouseenter)="showAccountDropdown()"
                 (mouseleave)="hideAccountDropdown()"
               >
-                <button class="dropdown-toggle">
+                <button
+                  class="dropdown-toggle"
+                  (click)="toggleAccountDropdown()"
+                >
                   <i class="fa fa-user mx-2"></i> My Account
                   <i class="fa fa-caret-down mx-2"></i>
                 </button>
@@ -39,16 +42,18 @@
                   </ul>
                 </div>
               </li>
-
               <li class="mx-3"><a>Login/Register</a></li>
-
               <!-- Currency Dropdown -->
               <li
                 class="dropdown-container"
+                #currencyDropdown
                 (mouseenter)="showCurrencyDropdown()"
                 (mouseleave)="hideCurrencyDropdown()"
               >
-                <button class="dropdown-toggle">
+                <button
+                  class="dropdown-toggle"
+                  (click)="toggleCurrencyDropdown()"
+                >
                   USD
                   <i class="fa fa-caret-down mx-2"></i>
                 </button>
@@ -78,7 +83,7 @@
         <img src="assets/images/logo.png" alt="logo" />
       </ng-template>
       <ng-template #end>
-        <div class="flex items-center gap-6">
+        <div class="flex items-center gap-5">
           <i class="pi pi-search"></i>
           <i class="pi pi-heart"></i>
           <i class="pi pi-shopping-bag"></i>
