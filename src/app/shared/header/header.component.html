@@ -42,7 +42,7 @@
                 >
                   <ul class="list-none p-0 m-0">
                     <li class="py-1" *ngFor="let item of accountMenuItems">
-                      <a [href]="item.link">{{ item.label }}</a>
+                      <a [routerLink]="item.routerLink">{{ item.label }}</a>
                     </li>
                   </ul>
                 </div>
@@ -71,7 +71,7 @@
                 >
                   <ul class="list-none p-0 m-0">
                     <li class="py-1" *ngFor="let item of currencyMenuItems">
-                      <a>{{ item.label }}</a>
+                      <a (click)="item.command()">{{ item.label }}</a>
                     </li>
                   </ul>
                 </div>
@@ -86,10 +86,12 @@
   <!-- Bottom Header -->
   <div class="container">
     <p-menubar class="menu-bar" [model]="items">
-      <ng-template #start>
-        <img src="assets/images/logo.png" alt="logo" />
+      <ng-template pTemplate="start">
+        <a [routerLink]="'/'">
+          <img src="assets/images/logo.png" alt="logo"
+        /></a>
       </ng-template>
-      <ng-template #end>
+      <ng-template pTemplate="end">
         <div class="flex items-center gap-5">
           <i class="pi pi-search"></i>
           <i class="pi pi-heart"></i>

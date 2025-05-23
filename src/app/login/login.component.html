@@ -4,47 +4,49 @@
   [breadcrumbItems]="breadcrumbs"
 ></app-inner-layout>
 <div class="container py-8">
-  <h2 class="text-center">Login</h2>
-  <form>
-    <div class="grid m-0">
-      <div class="col-12 my-2">
-        <p-floatlabel variant="on">
-          <input
-            class="w-full"
-            pInputText
-            id="on_label"
-            [(ngModel)]="userName"
-            name="userName"
-            autocomplete="off"
-          />
-          <label for="on_label"
-            >User Name or Email Address<span class="text-red-500"
-              >*</span
-            ></label
-          >
-        </p-floatlabel>
+  <div class="p-3 shadow-2 login-box">
+    <h2 class="text-center">Login</h2>
+    <form class="form">
+      <div class="grid m-0">
+        <div class="col-12 my-2">
+          <p-floatlabel variant="on">
+            <input
+              class="w-full"
+              pInputText
+              id="username"
+              [(ngModel)]="userName"
+              name="userName"
+              autocomplete="off"
+            />
+            <label for="username"
+              >User Name or Email Address<span class="text-red-500"
+                >*</span
+              ></label
+            >
+          </p-floatlabel>
+        </div>
+        <div class="col-12 my-2">
+          <p-floatlabel variant="on">
+            <input
+              class="w-full"
+              pInputText
+              id="password"
+              [(ngModel)]="password"
+              name="password"
+              autocomplete="off"
+            />
+            <label for="password"
+              >Password<span class="text-red-500">*</span></label
+            >
+          </p-floatlabel>
+        </div>
       </div>
-      <div class="col-12 my-2">
-        <p-floatlabel variant="on">
-          <input
-            class="w-full"
-            pInputText
-            id="on_label"
-            [(ngModel)]="password"
-            name="password"
-            autocomplete="off"
-          />
-          <label for="on_label"
-            >Password<span class="text-red-500">*</span></label
-          >
-        </p-floatlabel>
+      <div class="col-12 text-center">
+        <p-button label="Login" /><span>or</span
+        ><a [routerLink]="['/register']" class="my-3 mx-2 inline-block"
+          >Create an account</a
+        >
       </div>
-    </div>
-    <div class="col-12 text-center">
-      <p-button label="Login" /><span>or</span
-      ><a [routerLink]="['/register']" class="my-3 mx-2 inline-block"
-        >Create an account</a
-      >
-    </div>
-  </form>
+    </form>
+  </div>
 </div>

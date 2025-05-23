@@ -5,6 +5,9 @@ h2 {
 }
 :host ::ng-deep {
   .p {
+    &-inputnumber {
+      width: 100%;
+    }
     &-inputtext {
       &:enabled {
         &:hover {
@@ -32,5 +35,13 @@ h2 {
         color: $gray2;
       }
     }
+  }
+}
+
+.reg-box {
+  width: 60%;
+  margin: 0 auto;
+  @media screen and (max-width: 767px) {
+    width: 90%;
   }
 }
