@@ -1,0 +1,30 @@
+@import "../../assets/variables/variables.scss";
+:host ::ng-deep {
+  .p {
+    &-tablist {
+      &-tab-list {
+        border-style: none;
+      }
+      &-active-bar {
+        background: transparent;
+      }
+    }
+    &-tab {
+      &:not(.p-tab-active):not(.p-disabled):hover {
+        background: $red;
+        color: $white;
+      }
+      border: 1px solid;
+      border-color: $red;
+      margin: 0px 20px;
+      &:first-child {
+        margin-left: 0;
+        margin-right: 20px;
+      }
+      &-active {
+        background: $red;
+        color: $white;
+      }
+    }
+  }
+}

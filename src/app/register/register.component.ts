@@ -31,6 +31,7 @@ export class RegisterComponent implements OnInit {
   userName: string | undefined;
   password: string | undefined;
   confirmPassword: string | undefined;
+  mobile: number | undefined;
   ngOnInit(): void {
     this.breadcrumbs = [{ label: 'Register' }];
   }

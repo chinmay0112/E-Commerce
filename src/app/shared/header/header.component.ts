@@ -10,7 +10,7 @@ import { SelectModule } from 'primeng/select';
 import { MenubarModule } from 'primeng/menubar';
 import { MenuItem } from 'primeng/api';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -20,6 +20,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     MenubarModule,
     AnimateOnScrollModule,
     RouterLink,
+    RouterModule,
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
@@ -34,20 +35,20 @@ export class HeaderComponent {
 
   // Menu items for the account dropdown
   accountMenuItems = [
-    { label: 'Login', link: '/' },
-    { label: 'Register', link: '' },
-    { label: 'Cart', link: '' },
-    { label: 'Checkout', link: '' },
-    { label: 'Wishlist', link: '' },
+    { label: 'Login', routerLink: '/login' },
+    { label: 'Register', routerLink: '/register' },
+    { label: 'Cart', routerLink: '/cart' },
+    { label: 'Checkout', routerLink: '/checkout' },
+    { label: 'Wishlist', routerLink: '/wishlist' },
   ];
 
   // Menu items for the currency dropdown
   currencyMenuItems = [
-    { label: 'USD', link: '' },
-    { label: 'EUR', link: '' },
-    { label: 'GBP', link: '' },
-    { label: 'JPY', link: '' },
-    { label: 'CAD', link: '' },
+    { label: 'USD', command: () => this.setCurrency('USD') },
+    { label: 'EUR', command: () => this.setCurrency('EUR') },
+    { label: 'GBP', command: () => this.setCurrency('GBP') },
+    { label: 'JPY', command: () => this.setCurrency('JPY') },
+    { label: 'CAD', command: () => this.setCurrency('CAD') },
   ];
 
   constructor(private renderer: Renderer2) {
@@ -58,30 +59,37 @@ export class HeaderComponent {
     this.items = [
       {
         label: 'Home',
+        routerLink: '/',
       },
       {
-        label: 'Features',
+        label: 'About',
+        routerLink: '/about',
       },
       {
-        label: 'Projects',
+        label: 'Shop',
         items: [
           {
-            label: 'Components',
+            label: 'Shop with us',
+            routerLink: '/shop',
           },
           {
-            label: 'Blocks',
+            label: 'Buy Product',
+            routerLink: '/product-details',
           },
           {
             label: 'UI Kit',
+            routerLink: '/ui-kit',
           },
           {
             label: 'Templates',
             items: [
               {
                 label: 'Apollo',
+                routerLink: '/templates/apollo',
               },
               {
                 label: 'Ultima',
+                routerLink: '/templates/ultima',
               },
             ],
           },
@@ -89,6 +97,7 @@ export class HeaderComponent {
       },
       {
         label: 'Contact',
+        routerLink: '/contact',
       },
     ];
   }
@@ -159,6 +168,13 @@ export class HeaderComponent {
   @HostListener('document:keydown.escape')
   onEscapePress() {
     this.isAccountDropdownVisible = false;
+    this.isCurrencyDropdownVisible = false;
+  }
+
+  // Method to handle currency selection
+  setCurrency(currency: string) {
+    console.log(`Currency changed to ${currency}`);
+    // Implement your currency change logic here
     this.isCurrencyDropdownVisible = false;
   }
 }

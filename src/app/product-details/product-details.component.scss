@@ -1,0 +1,119 @@
+@import "../../assets/variables/variables.scss";
+:host ::ng-deep {
+  i {
+    &::before {
+      color: $white;
+      font-weight: 600;
+    }
+  }
+  .p-accordionpanel:not(.p-disabled).p-accordionpanel-active
+    > .p-accordionheader {
+    background: $red;
+    &:hover {
+      background: $red;
+    }
+  }
+  .p-accordionpanel:not(.p-accordionpanel-active):not(.p-disabled)
+    > .p-accordionheader {
+    background: $red;
+    &:hover {
+      background: $red;
+    }
+  }
+  .p {
+    &-galleria {
+      border: none;
+      border-radius: 0;
+    }
+    &-accordionheader {
+      border-radius: 0;
+    }
+    &-accordioncontent {
+      border: 1px solid $red;
+    }
+    &-accordionpanel {
+      margin: 10px;
+    }
+  }
+  .p {
+    &-tablist {
+      &-tab-list {
+      }
+      &-active-bar {
+        background: transparent;
+      }
+    }
+    &-tab {
+      &:not(.p-tab-active):not(.p-disabled):hover {
+        background: $red;
+        color: $white;
+      }
+      border-bottom: 0;
+      &-active {
+        background: $red;
+        color: $white;
+      }
+    }
+  }
+}
+h2 {
+  font-weight: 500;
+  font-size: 2em;
+}
+.ellipsis-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.qty-btn,
+.add-cart-btn {
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  background: $red;
+  color: $white;
+
+  &:hover {
+    background: $redHover;
+  }
+}
+
+.color {
+  li {
+    height: 28px;
+    width: 28px;
+    background: #999;
+    outline: 2px solid #999;
+    outline-offset: 2px;
+    margin: 0px 5px;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+.counter {
+  width: 30px;
+}
+.size {
+  li {
+    a {
+      display: block;
+      height: 35px;
+      width: 35px;
+      line-height: 35px;
+      text-align: center;
+      border: 1px solid $red;
+      color: $red;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        background: $redHover;
+        color: $white;
+      }
+    }
+  }
+}
