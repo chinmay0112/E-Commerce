@@ -1,0 +1,25 @@
+@import "../../../assets/variables/variables.scss";
+:host ::ng-deep {
+  h2 {
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+  .p {
+    &-rating {
+      margin: 5px 0px;
+      svg {
+        path {
+          fill: $red;
+        }
+      }
+    }
+    &-card {
+      border-radius: 0;
+      padding: 0 12px;
+      box-shadow: none;
+      &-body {
+        padding: 25px 0px;
+      }
+    }
+  }
+}

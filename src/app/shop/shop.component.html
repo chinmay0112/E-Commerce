@@ -1,0 +1,43 @@
+<app-header></app-header>
+<app-inner-layout
+  heading="Shop"
+  [breadcrumbItems]="breadcrumbs"
+></app-inner-layout>
+<div class="container py-8 relative">
+  <div class="flex">
+    <div>
+      <p-tabs [value]="0">
+        <p-tablist>
+          <p-tab [value]="0">ALL PRODUCT</p-tab>
+          <p-tab [value]="1">HONEY</p-tab>
+          <p-tab [value]="2">OLIVE</p-tab>
+          <p-tab [value]="3">NUT</p-tab>
+          <p-tab [value]="4">COCONUT</p-tab>
+        </p-tablist>
+
+        <p-tabpanels>
+          <p-tabpanel [value]="0">
+            <div class="grid">
+              <div class="col-12 md:col-3"><app-card></app-card></div>
+              <div class="col-12 md:col-3"><app-card></app-card></div>
+              <div class="col-12 md:col-3"><app-card></app-card></div>
+              <div class="col-12 md:col-3"><app-card></app-card></div>
+            </div>
+          </p-tabpanel>
+          <p-tabpanel [value]="1">
+            <p class="m-0">Honey</p>
+          </p-tabpanel>
+          <p-tabpanel [value]="2">
+            <p class="m-0">Olive</p>
+          </p-tabpanel>
+          <p-tabpanel [value]="3">
+            <p class="m-0">Nut</p>
+          </p-tabpanel>
+          <p-tabpanel [value]="4">
+            <p class="m-0">Coconut</p>
+          </p-tabpanel>
+        </p-tabpanels>
+      </p-tabs>
+    </div>
+  </div>
+</div>

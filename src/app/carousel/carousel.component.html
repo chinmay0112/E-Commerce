@@ -1,0 +1,23 @@
+<p-carousel
+  [value]="products"
+  [numVisible]="1"
+  [numScroll]="1"
+  [circular]="true"
+>
+  <ng-template let-product #item>
+    <div class="border border-surface rounded-border">
+      <div class="relative mx-auto">
+        <img
+          src="assets/images/{{ product.image }}"
+          [alt]="product.name"
+          class="w-full rounded-border"
+        />
+        <div class="absolute top-50 left-50 cnt px-3 py-6 text-center">
+          <h2 class="my-0">{{ product.title }}</h2>
+          <p class="my-2">{{ product.description }}</p>
+          <a class="my-2 inline-block p-3">{{ product.link }}</a>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>

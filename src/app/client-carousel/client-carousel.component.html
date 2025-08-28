@@ -1,0 +1,26 @@
+<p-carousel
+  [value]="products"
+  [numVisible]="1"
+  [numScroll]="1"
+  [circular]="true"
+>
+  <ng-template let-product #item>
+    <div class="border border-surface rounded-border">
+      <div class="relative mx-auto text-center">
+        <p class="my-0 p-3 md:p-2">
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It
+          has roots in a piece of classical LatinContrary to popular belief,
+          Lorem Ipsum is not simply random text. It has roots in a piece of
+          classical Latin
+        </p>
+        <span class="inline-block my-4">{{ product.name }}</span>
+        <p class="my-0">{{ product.designation }}</p>
+        <img
+          class="mx-auto my-4"
+          src="assets/images/client-img.png"
+          alt="{{ product.designation }}"
+        />
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>

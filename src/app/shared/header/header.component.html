@@ -1,0 +1,103 @@
+<header class="header">
+  <div
+    class="header-top"
+    pAnimateOnScroll
+    enterClass="animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000"
+    leaveClass="animate-leave fade-out-0"
+  >
+    <div class="container">
+      <div class="grid m-0">
+        <div class="col-12 md:col-6">
+          <ul class="list-none text-center md:text-left">
+            <li><i class="fa fa-phone"></i>+01 123 456 789</li>
+            <li class="mx-3">
+              <i class="fa fa-envelope mx-1 vertical-align-middle"></i
+              >youremail&#64;gmail.com
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 md:col-6">
+          <div
+            class="flex justify-content-center md:justify-content-end flex-wrap"
+          >
+            <ul class="list-none flex align-items-center login-panel">
+              <!-- Account Dropdown -->
+              <li
+                class="dropdown-container"
+                #accountDropdown
+                (mouseenter)="showAccountDropdown()"
+                (mouseleave)="hideAccountDropdown()"
+              >
+                <button
+                  class="dropdown-toggle"
+                  (click)="toggleAccountDropdown()"
+                >
+                  <i class="fa fa-user mx-2"></i> My Account
+                  <i class="fa fa-caret-down mx-2"></i>
+                </button>
+                <!-- Account Dropdown content -->
+                <div
+                  class="dropdown-menu"
+                  [class.show]="isAccountDropdownVisible"
+                >
+                  <ul class="list-none p-0 m-0">
+                    <li class="py-1" *ngFor="let item of accountMenuItems">
+                      <a [routerLink]="item.routerLink">{{ item.label }}</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mx-3">
+                <a routerLink="/register">Login/Register</a>
+              </li>
+              <!-- Currency Dropdown -->
+              <li
+                class="dropdown-container"
+                #currencyDropdown
+                (mouseenter)="showCurrencyDropdown()"
+                (mouseleave)="hideCurrencyDropdown()"
+              >
+                <button
+                  class="dropdown-toggle"
+                  (click)="toggleCurrencyDropdown()"
+                >
+                  USD
+                  <i class="fa fa-caret-down mx-2"></i>
+                </button>
+                <!-- Currency Dropdown content -->
+                <div
+                  class="dropdown-menu"
+                  [class.show]="isCurrencyDropdownVisible"
+                >
+                  <ul class="list-none p-0 m-0">
+                    <li class="py-1" *ngFor="let item of currencyMenuItems">
+                      <a (click)="item.command()">{{ item.label }}</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Header -->
+  <div class="container">
+    <p-menubar class="menu-bar" [model]="items">
+      <ng-template pTemplate="start">
+        <a [routerLink]="'/'">
+          <img src="assets/images/logo.png" alt="logo"
+        /></a>
+      </ng-template>
+      <ng-template pTemplate="end">
+        <div class="flex items-center gap-5">
+          <i class="pi pi-search"></i>
+          <i class="pi pi-heart"></i>
+          <i class="pi pi-shopping-bag"></i>
+        </div>
+      </ng-template>
+    </p-menubar>
+  </div>
+</header>

@@ -1,0 +1,13 @@
+
+    <p-carousel  [value]="products" [numVisible]="3" [numScroll]="3" [responsiveOptions]="responsiveOptions" [circular]="true" [showIndicators]="false">
+        <ng-template let-product #item>
+            <div class="border border-surface-200 dark:border-surface-700 rounded  m-2 p-4">
+           
+                    <div class="image relative">
+                        <img src="{{ product.image }}" [alt]="product.name" class="w-full rounded-border" />
+                        <button class="absolute category-button px-5 py-3">{{product.name}}</button>
+                    </div>
+                
+            </div>
+        </ng-template>
+    </p-carousel>

@@ -1,0 +1,105 @@
+@import "../../assets/variables/variables.scss";
+.deal-of-the-day {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/images/img-3.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.2);
+    z-index: -1;
+  }
+  color: $white;
+  h2 {
+    font-size: 4em;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+
+  .box {
+    border: 1px solid $white;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    min-width: 200px;
+
+    h2 {
+      font-weight: 600;
+      text-align: center;
+    }
+
+    p {
+      font-size: 0.9em;
+      text-align: center;
+    }
+  }
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 600;
+}
+img {
+  margin: 12px auto;
+}
+.nature-oil {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/images/bg-img-2.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.3);
+    z-index: -1;
+  }
+  .container {
+    h2 {
+      font-size: 1.6em;
+      color: $white;
+      font-weight: 700;
+    }
+    p {
+      font-size: 1.1em;
+      color: $white;
+      font-weight: 400;
+    }
+    span {
+      font-size: 4.5em;
+      color: $red;
+    }
+  }
+}
+.what-our-client-says {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/images/bg-img-3.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+    z-index: -1;
+  }
+  h2 {
+    color: $white;
+    font-size: 3.2em;
+    font-weight: 500;
+  }
+}
